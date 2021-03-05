@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import '../../node_modules/normalize.css/normalize';
+
+%roboto-300 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+%roboto-400 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+$height-of-input: 45px;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  resize: none;
+  outline: none;
+  text-decoration: none;
+  @extend %roboto-400;
+}
+
+body {
+  background: #E6E6E6;
+}
+
+.flex {
+  display: flex;
+}
+
+.fl-js-cr {
+  justify-content: center;
+}
+
+.fl-js-sb {
+  justify-content: space-between;
+}
+
+.fl-fd-cm {
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.block {
+  margin: 150px auto 0;
+  max-width: 400px;
+}
+
+.form {
+  width: 100%;
+  &__search {
+    background: #fff;
+    border: none;
+    padding: 10px;
+    width: 65%;
+    height: $height-of-input;
+  }
+  &__submit {
+    width: 35%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    height: $height-of-input;
+    background: #2980B9;
+    color: #fff;
+  }
+}
+
+.list {
+  width: 100%;
+  background: #F2F2F2;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 1px 8px 0 #d6d6d6;
+  &__item {
+    padding: 10px;
+    @extend %roboto-300;
+    letter-spacing: .4px;
+  }
+}
+
+.active {
+  background: #c2c2c2;
+}
